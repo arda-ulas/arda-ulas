@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="232" viewBox="0 0 440 232" role="img" aria-label="slawatch: SLA-breach risk analytics on synthetic service-desk tickets: a PostgreSQL pipeline, a scikit-learn model behind FastAPI on AWS Lambda, and a Tableau dashboard.">
+<title>slawatch: SLA-breach risk analytics on synthetic service-desk tickets: a PostgreSQL pipeline, a scikit-learn model behind FastAPI on AWS Lambda, and a Tableau dashboard.</title>
+<rect x="0.5" y="0.5" width="439" height="231" rx="12" fill="none" stroke="#3d444d"/>
+<text x="24" y="40" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#656c76"><tspan fill="#3fb950">04</tspan>  Data · ML</text>
+<text x="416" y="40" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" fill="#656c76">↗</text>
+<text x="24" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#f0f6fc">slawatch</text>
+<text x="24" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#9198a1">SLA-breach risk analytics on synthetic service-desk</text>
+<text x="24" y="127" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#9198a1">tickets: a PostgreSQL pipeline, a scikit-learn model</text>
+<text x="24" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#9198a1">behind FastAPI on AWS Lambda, and a Tableau</text>
+<text x="24" y="169" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#9198a1">dashboard.</text>
+<text x="24" y="210" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#656c76">Python · pandas · scikit-learn · AWS</text>
+
+</svg>

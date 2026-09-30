@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="232" viewBox="0 0 440 232" role="img" aria-label="Blackbox: Time-travel debugger for AI agents. Record an Anthropic or OpenAI agent run, replay it offline, fork it at any tool result, and diff to the first divergence.">
+<title>Blackbox: Time-travel debugger for AI agents. Record an Anthropic or OpenAI agent run, replay it offline, fork it at any tool result, and diff to the first divergence.</title>
+<rect x="0.5" y="0.5" width="439" height="231" rx="12" fill="none" stroke="#d1d9e0"/>
+<text x="24" y="40" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#818b98"><tspan fill="#1a7f37">02</tspan>  Developer tools</text>
+<text x="416" y="40" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" fill="#818b98">↗</text>
+<text x="24" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#1f2328">Blackbox</text>
+<text x="24" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#59636e">Time-travel debugger for AI agents. Record an</text>
+<text x="24" y="127" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#59636e">Anthropic or OpenAI agent run, replay it offline,</text>
+<text x="24" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#59636e">fork it at any tool result, and diff to the first</text>
+<text x="24" y="169" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14" fill="#59636e">divergence.</text>
+<text x="24" y="210" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#818b98">TypeScript · Node.js · Vitest</text>
+<text x="416" y="210" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#818b98">npm · v0.2.1</text>
+</svg>
