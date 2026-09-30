@@ -117,18 +117,34 @@ function header(t) {
 <text x="${x0}" y="206" font-family="${MONO}" font-size="13" fill="${t.faint}">Toronto, ON  ·  Queen's Computing '26  ·  previously Android HMI at Ford</text>
 </g>`;
 
+  // Second prompt: types `ls projects/`, which leads into the project grid below.
   const finalAt = outAt + 0.9;
-  const line2 = [...prompt]
-    .map((c, i) => char(c, i, 240, c === "$" ? t.accent : t.faint, finalAt))
-    .join("\n");
-  const cursor2 = `<rect x="${(x0 + prompt.length * cw).toFixed(1)}" y="227" width="${cw}" height="17" fill="${t.muted}" opacity="0">
-<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" begin="${finalAt.toFixed(2)}s" repeatCount="indefinite"/>
+  const command2 = "ls projects/";
+  const type2Start = finalAt + 0.6;
+  const type2End = type2Start + command2.length * typeStep;
+  const line2 = [
+    ...[...prompt].map((c, i) =>
+      char(c, i, 240, c === "$" ? t.accent : t.faint, finalAt),
+    ),
+    ...[...command2].map((c, i) =>
+      char(c, prompt.length + i, 240, t.text, type2Start + i * typeStep),
+    ),
+  ].join("\n");
+  const cursor2Xs = [...Array(command2.length + 1)].map((_, i) =>
+    (x0 + (prompt.length + i) * cw).toFixed(1),
+  );
+  const cursor2Times = [0, ...[...command2].map((_, i) => type2Start - finalAt + i * typeStep + 0.01)];
+  const type2Dur = type2End - finalAt;
+  const cursor2 = `<rect x="${cursor2Xs[0]}" y="227" width="${cw}" height="17" fill="${t.muted}" opacity="0">
+<animate attributeName="x" values="${cursor2Xs.join(";")}" keyTimes="${cursor2Times.map((s) => (s / type2Dur).toFixed(4)).join(";")}" begin="${finalAt.toFixed(2)}s" dur="${type2Dur.toFixed(2)}s" calcMode="discrete" fill="freeze"/>
+<animate attributeName="opacity" values="0;1" keyTimes="0;1" calcMode="discrete" dur="${finalAt.toFixed(2)}s" fill="freeze"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" begin="${(type2End + 0.2).toFixed(2)}s" repeatCount="indefinite"/>
 </rect>`;
 
   return svg(
     W,
     H,
-    "$ whoami: Arda Ulas Ozdemir. Software developer. Android, on-device AI, and tools for debugging AI agents.",
+    "$ whoami: Arda Ulas Ozdemir. Software developer. Android, on-device AI, and tools for debugging AI agents. $ ls projects/",
     `<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="none" stroke="${t.border}"/>
 <g font-family="${MONO}" font-size="15">
 ${line1}

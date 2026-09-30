@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="$ whoami: Arda Ulas Ozdemir. Software developer. Android, on-device AI, and tools for debugging AI agents." src="assets/header-light.svg" width="100%">
+  <img alt="$ whoami: Arda Ulas Ozdemir. Software developer. Android, on-device AI, and tools for debugging AI agents. $ ls projects/" src="assets/header-light.svg" width="100%">
 </picture>
 
 ### Selected work
