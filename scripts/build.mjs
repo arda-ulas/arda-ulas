@@ -70,12 +70,13 @@ function header(t) {
 
   const char = (c, i, y, fill, begin) => {
     const x = (x0 + i * cw).toFixed(1);
+    // Visible by default; the animation hides it until its turn. Renderers
+    // without SVG animation show the finished header instead of a blank one.
     const anim =
       begin === undefined
         ? ""
-        : `<set attributeName="opacity" to="1" begin="${begin.toFixed(2)}s" fill="freeze"/>`;
-    const opacity = begin === undefined ? "" : ` opacity="0"`;
-    return `<text x="${x}" y="${y}" fill="${fill}"${opacity}>${esc(c)}${anim}</text>`;
+        : `<animate attributeName="opacity" values="0;1" keyTimes="0;1" calcMode="discrete" dur="${begin.toFixed(2)}s" fill="freeze"/>`;
+    return `<text x="${x}" y="${y}" fill="${fill}">${esc(c)}${anim}</text>`;
   };
 
   const line1 = [
@@ -93,13 +94,16 @@ function header(t) {
   );
   const cursorTimes = [0, ...[...command].map((_, i) => typeStart + i * typeStep + 0.01)];
   const keyTimes = cursorTimes.map((s) => (s / enterAt).toFixed(4)).join(";");
-  const cursor1 = `<rect x="${cursorXs[0]}" y="39" width="${cw}" height="17" fill="${t.muted}">
+  const cursor1 = `<rect x="${cursorXs[0]}" y="39" width="${cw}" height="17" fill="${t.muted}" opacity="0">
 <animate attributeName="x" values="${cursorXs.join(";")}" keyTimes="${keyTimes}" dur="${enterAt.toFixed(2)}s" calcMode="discrete" fill="freeze"/>
-<set attributeName="opacity" to="0" begin="${enterAt.toFixed(2)}s" fill="freeze"/>
+<animate attributeName="opacity" values="1;0" keyTimes="0;1" calcMode="discrete" dur="${enterAt.toFixed(2)}s" fill="freeze"/>
 </rect>`;
 
-  const reveal = (delay) =>
-    `opacity="0"><animate attributeName="opacity" from="0" to="1" begin="${(outAt + delay).toFixed(2)}s" dur="0.45s" fill="freeze"/>`;
+  const reveal = (delay) => {
+    const start = outAt + delay;
+    const dur = start + 0.45;
+    return `><animate attributeName="opacity" values="0;0;1" keyTimes="0;${(start / dur).toFixed(4)};1" dur="${dur.toFixed(2)}s" fill="freeze"/>`;
+  };
 
   const output = `
 <g ${reveal(0)}
